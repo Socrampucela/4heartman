@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargando...</title>
+  <script>
+    fetch('./src/index.html')
+      .then(response => {
+        if (!response.ok) throw new Error('No se pudo encontrar src/index.html');
+        return response.text();
+      })
+      .then(html => {
+        document.open();
+        document.write(html);
+        document.close();
+        
+        window.history.replaceState({}, document.title, window.location.pathname);
+      })
+      .catch(err => console.error(err));
+  </script>
+</head>
+<body>
+</body>
+</html>
