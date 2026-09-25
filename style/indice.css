@@ -1,14 +1,15 @@
-video{
-    position: relative;
-    z-index: 10;
-    margin-top: 27%;
-    margin-left: -2.9%;
-    height: 450px;
-    width: 450px;
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
-:root{
-    cursor: url(../cursors/cursor_general.cur)16 16,auto;
+
+:root {
+    cursor: url(../cursors/cursor_general.cur) 16 16, auto;
 }
+
 @font-face {
     font-family: 'DSEG14';
     src: url("../fonts/fuenteWII/DSEG14Classic-BoldItalic.ttf") format(truetype);
@@ -23,29 +24,19 @@ video{
     font-style: normal;
 }
 
-#reloj{
-    font-family: 'DSEG14', monospace;
-    font-size: 60px;
-    color: #9aa3a8;
-    text-align: center;
-    padding-top: 33%;
-    z-index: 10;
+#fondo-wii {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: bottom center;
+    background-image: url(../media/fondo_wii.png);
+    background-repeat: no-repeat;
 }
 
-.canal-Wii{
-    border: 1px solid rgb(163, 163, 163);
-    border-radius: 8%;
-    height: 80%;
-    width: 70%;
-    justify-self: center;
-    align-self: center;
-    overflow: hidden; 
-}
-.canal-Wii:hover{
- border: 1px solid rgb(59, 179, 238);
- box-shadow: 1px rgb(59, 179, 238) ;
-}
-#canales-contenedor{
+#canales-contenedor {
     position: absolute;
     top: 3%;
     left: 50%;
@@ -59,57 +50,84 @@ video{
     z-index: 11;
 }
 
-#nombre{
-    text-align: center;   
-    padding-top: 3.5%;
-    font-size: 40px;
-    font-family: 'JetBrainsMono', monospace ;
-    color: #9aa3a8;
-}
-.icono{
-    height: 10px;
-}
-
-#fondo-wii{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-size:cover;
-    background-position:bottom center ;
-    background-image: url(../media/fondo_wii.png);
-    background-repeat: no-repeat;
+.canal-Wii {
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 8%;
+    height: 80%;
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+    overflow: hidden; 
 }
 
-html,body{
-    margin:0;
-    padding:0;
-    height:100%;
-    overflow:hidden;
+.canal-Wii:hover {
+    border: 1px solid rgb(59, 179, 238);
+    box-shadow: 1px rgb(59, 179, 238);
 }
-.imagen-canal{
+
+.imagen-canal {
     width: 100%;
     height: 100%;
     object-fit: cover; 
     display: block;
 }
-#boton-contacto{
-    height: 180px;
-    width: 180px;
+
+video {
+    position: absolute;
+    top:56vh;
+    right:167vh;
+    z-index: 10;
+    height: auto;
+    width: 25vw;
+    max-width: 450px;
+}
+
+#reloj {
+    font-family: 'DSEG14', monospace;
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    color: #9aa3a8;
+    text-align: center;
+    position: absolute;
+    bottom: 8vh;
+    left: 49%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+#nombre {
+    text-align: center;   
+    padding-top: 72vh;
+    font-size: 40px;
+    font-family: 'JetBrainsMono', monospace;
+    color: #9aa3a8;
+}
+
+.icono {
+    height: 10px;
+}
+
+#boton-contacto {
+    height: 12vw;
+    width: 12vw;
+    max-width: 180px;
+    max-height: 180px;
     background-color: transparent;
     color: transparent;
     border: transparent;
     position: absolute;
-    margin-top: 34%;
-    margin-left: 66%;
+    bottom: 5vh;
+    right: 5vw;
     border-radius: 50%;
 }
 
+#icono-vacio {
+    position: absolute;
+    bottom: 8.5vh;
+    left: 3.7vw;
+}
 
-a:hover,button:hover{
-    cursor: url(../cursors/cursor_links.cur),auto;
-
+a:hover, button:hover {
+    cursor: url(../cursors/cursor_links.cur), auto;
 }
 
 [data-tooltip] {
@@ -137,11 +155,4 @@ a:hover,button:hover{
 
 [data-tooltip]:hover::after {
     opacity: 1;
-
-}
-
-#icono-vacio{
-    position: fixed;
-    margin-top: 33.45%;
-    margin-left: 3.7%;
 }
