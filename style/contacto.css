@@ -1,0 +1,51 @@
+:root{
+    cursor: url(../cursors/cursor_general.cur),auto;
+}
+body{
+    background-color: #d1d1d1;
+}
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+    overflow:hidden;
+}
+#contenedor-volver{
+    top: 50%;
+    left: -20px; 
+    
+    transform: translateY(-50%); 
+    border: 3px solid #ABA8AB;
+    border-left: transparent;
+    border-radius: 999px;
+    width: 30%;
+    height: 10%;
+    margin-top: 35%;
+        
+    overflow: visible; 
+}
+
+#volver{
+    position: absolute;
+    
+    transform: translateY(-50%); 
+    background-color: #A0ABAD;
+    border: 2px solid #73B5CC;
+    border-radius: 999px;
+    width: calc(85% + 20px); 
+    height: 80%;
+    text-align: center;
+    font-size: 40px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover,button:hover{
+    cursor: url(../cursors/cursor_links.cur),auto;
+}

@@ -1,0 +1,144 @@
+video{
+    position: relative;
+    z-index: 10;
+    margin-top: 27%;
+    margin-left: -2.9%;
+    height: 450px;
+    width: 450px;
+}
+:root{
+    cursor: url(../cursors/cursor_general.cur),auto;
+}
+@font-face {
+    font-family: 'DSEG14';
+    src: url("../fonts/fuenteWII/DSEG14Classic-BoldItalic.ttf") format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("../fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf") format(truetype);
+    font-weight: 650;
+    font-style: normal;
+}
+
+#reloj{
+    font-family: 'DSEG14', monospace;
+    font-size: 60px;
+    color: #9aa3a8;
+    text-align: center;
+    padding-top: 33%;
+    z-index: 10;
+}
+
+.canal-Wii{
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 8%;
+    height: 80%;
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+    overflow: hidden; 
+}
+
+#canales-contenedor{
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 20px 5px;
+    height: 60%;
+    width: 80%;
+    z-index: 11;
+}
+
+#nombre{
+    text-align: center;   
+    padding-top: 3.5%;
+    font-size: 40px;
+    font-family: 'JetBrainsMono', monospace ;
+    color: #9aa3a8;
+}
+.icono{
+    height: 10px;
+}
+
+#fondo-wii{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size:cover;
+    background-position:bottom center ;
+    background-image: url(../media/fondo_wii.png);
+    background-repeat: no-repeat;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+    overflow:hidden;
+}
+.imagen-canal{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+#boton-contacto{
+    height: 180px;
+    width: 180px;
+    background-color: transparent;
+    color: transparent;
+    border: transparent;
+    position: absolute;
+    margin-top: 34%;
+    margin-left: 66%;
+    border-radius: 50%;
+}
+
+
+a:hover,button:hover{
+    cursor: url(../cursors/cursor_links.cur),auto;
+
+}
+
+[data-tooltip] {
+    position: relative; 
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip); 
+    position: absolute;
+    bottom: 110%; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    border: 1px solid black;
+    background: white;
+    color: black;
+    padding: 6px 12px;
+    font-size: 13px;
+    white-space: nowrap; 
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 100;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+
+}
+
+#icono-vacio{
+    position: fixed;
+    margin-top: 33.45%;
+    margin-left: 3.7%;
+}
