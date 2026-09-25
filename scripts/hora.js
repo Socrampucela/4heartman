@@ -7,7 +7,6 @@ function actualizarReloj(){
 
     const horaFinal = horaActual.toString().padStart(2, '0');
     document.getElementById('reloj').textContent = `${horaActual}:${minutos}`;
-    console.log(horaActual + ":"+ minutos)
 }
 
 actualizarReloj();
